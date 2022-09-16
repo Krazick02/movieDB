@@ -1,0 +1,50 @@
+.container {
+    position: absolute;
+    color: #FFF;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: auto auto;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.targeta {
+    width: 170px;
+    height: 300px;
+    background: white;
+    margin: 30px;
+    float: left;
+    border: 3px solid blackks;
+}
+
+#yep {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.primero {
+    margin: 0;
+}
+
+#verPelis {
+    background-color: aquamarine;
+    display: flow-root;
+    flex-direction: column;
+}
+
+.ver {
+    display: block;
+    flex-direction: column;
+    overflow: scroll;
+    height: 400px;
+}
+
+.mostrador {
+    width: 100vw;
+    height: 100vh;
+}

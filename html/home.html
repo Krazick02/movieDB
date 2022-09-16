@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/peliculas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Lista de Populares</title>
+</head>
+
+<body class="yep">
+
+    <div class="container" id="verPelis">
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Peliculas mas populares streaming
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in poStreaming">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Populares en TV
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in poTv">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Peliculas mas populares en alquiler
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in poAlquiler">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Peliculas mas populares en cine
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in poCine">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Ver gratis en peliculas
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in grPeliculas">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Ver gratis en Tv
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in grTv">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Tendencias Hoy
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in tenHoy">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="populares">
+            <div class="ver">
+                <div class="text-center">
+                    <h3>
+                        Tendencias esta semana
+                    </h3>
+                </div>
+                <div class="pelis">
+                    <div class="targeta" v-for="p in tenSem">
+                        <div class="text-center">
+                            <img class="poster" v-bind:src="imgRoute + p.poster_path" width="100" src=>
+                        </div>
+                        <div>
+                            <p style="color:black">{{p.title }}</p>
+                            <p style="color:black">{{p.release_date}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button @click="detalles(p)" class="btn btn-primary">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="../js/pPopulares.js"></script>
+</body>
+
+</html>
